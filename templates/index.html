@@ -3,7 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ name }}</title>
+    {% block title %}
+        {{ super() }}
+        {{ name }}
+    {% endblock %}
 </head>
 <body>
 
