@@ -14,3 +14,7 @@ def login():
     if form.validate_on_submit():
         return render_template('profile.html', name=site_name, form=form)
     return render_template('index.html', name=site_name, form=form)
+
+
+def logout():
+    pass

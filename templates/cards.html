@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container" style="margin-top: 5%;">
+        <h2> Card Selectors </h2>
+        {% for card_selector in form.card_fields %}
+            {{ card_selector.cards_selector }}
+        {% endfor %}
+    </div>
+{% endblock %}

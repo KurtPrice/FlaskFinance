@@ -8,9 +8,12 @@ site_name = "Finance Site"
 
 if __name__ == '__main__':
     Bootstrap(app)
-    app.session_cookie_name = site_name
-    app.secret_key = "SDGLKJGTHKLS*%(@#$J(SGS*(&GSJK(*GJSLKJT(*W646549845646546549874"
     app.register_blueprint(login_blueprint.login_bp)
-    app.config['DEBUG'] = True
-    app.config['WTF_CSRF_ENABLED'] = True
+
+    app.config.update(
+        DEBUG=True,
+        SECRET_KEY="that's-a-spicyah-meatball",
+        SESSION_COOKIE_NAME=site_name
+    )
+
     app.run()

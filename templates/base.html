@@ -37,7 +37,9 @@
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
           </form>
           {% else %}
-          <form
+          <form class="form-inline my-w my-lg-0" method="post" action="/logout">
+              <button class="btn btn-outline-success my-w my-sm-0" type="submit">Logout</button>
+          </form>
           {% endif %}
       </div>
     </nav>
