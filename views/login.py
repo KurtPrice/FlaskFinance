@@ -1,4 +1,5 @@
 from flask import render_template, redirect, url_for, request
+from flask_login import login_manager, logout_user
 from forms.login import LoginForm
 from Finance import site_name
 

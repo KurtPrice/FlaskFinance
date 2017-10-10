@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
+from flask_login import LoginManager
 from blueprints import login_blueprint
 
 app = Flask(__name__)
@@ -15,5 +16,8 @@ if __name__ == '__main__':
         SECRET_KEY="that's-a-spicyah-meatball",
         SESSION_COOKIE_NAME=site_name
     )
+
+    lm = LoginManager()
+    lm.init_app(app)
 
     app.run()
