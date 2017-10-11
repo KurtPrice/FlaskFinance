@@ -5,5 +5,10 @@
         {% for card_selector in form.card_fields %}
             {{ card_selector.cards_selector }}
         {% endfor %}
+        <button name="add" onclick="addCard()">Add</button>
+        <div id="cardlist">
+
+        </div>
     </div>
+    <script src="{{ url_for('static', filename='cards.js') }}" />
 {% endblock %}
