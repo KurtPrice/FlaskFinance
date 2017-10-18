@@ -24,7 +24,14 @@ function getCards() {
     return list;
 }
 
+function submitGet() {
+    var cards = getCards()
+    jQuery.getJSON('cards', {
+        card_list: JSON.stringify(cards)
+    }, null);
+}
+
 function getSelectedCard() {
-    var cardselector = document.getElementById("card_fields-0-cards_selector");
+    var cardselector = document.getElementById("cards_selector");
     return cardselector[cardselector.selectedIndex].text;
 }
