@@ -5,6 +5,8 @@ from blueprints import login_blueprint
 
 app = Flask(__name__)
 site_name = "Finance Site"
+cards_dict = {'CSR': 'Chase Sapphire Reserve', 'CF': 'Chase Freedom', 'CFU': 'Chase Freedom Unlimited',
+              'BN': 'Barnes & Noble', 'BKL': 'Buckle', 'AZN': 'Amazon', 'CSP': 'Chase Sapphire Preferred'}
 
 
 if __name__ == '__main__':

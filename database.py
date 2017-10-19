@@ -2,6 +2,13 @@ from pymongo import MongoClient
 
 
 def create_database(name):
+    """
+    If the database does not already exist
+    this function will create it. If it does
+    the function will simply return the database
+    :param name: database name obviously.
+    :return:
+    """
     client = MongoClient()
     db = client[name]
     return db

@@ -11,6 +11,11 @@
         <div id="cardlist">
 
         </div>
+        <div id="benefits">
+            {% for benefit in benefits %}
+                <p>benefit</p><br/>
+            {% endfor %}
+        </div>
     </div>
     {% block scripts %}
         {{ super() }}
