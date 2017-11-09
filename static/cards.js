@@ -25,10 +25,16 @@ function getCards() {
 }
 
 function submitGet() {
-    var cards = getCards()
-    jQuery.getJSON('cards', {
-        card_list: JSON.stringify(cards)
-    }, null);
+    var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", "benefits");
+    var hiddenField = document.createElement("input");
+    var cards = getCards();
+    hiddenField.setAttribute("name", "card_list")
+    hiddenField.setAttribute("value", JSON.stringify(cards));
+    form.appendChild(hiddenField);
+    document.body.appendChild(form);
+    form.submit()
 }
 
 function getSelectedCard() {
