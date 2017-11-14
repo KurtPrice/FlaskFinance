@@ -10,8 +10,6 @@ card_col = create_database("finance")
 card_col = card_col["cards"]
 card_list = card_col.find()
 cards_dict = {post["card"]: post["full_name"] for post in card_list}
-# cards_dict = {'CSR': 'Chase Sapphire Reserve', 'CF': 'Chase Freedom', 'CFU': 'Chase Freedom Unlimited',
-#              'BN': 'Barnes & Noble', 'BKL': 'Buckle', 'AZN': 'Amazon', 'CSP': 'Chase Sapphire Preferred'}
 
 
 if __name__ == '__main__':
