@@ -4,7 +4,6 @@ from flask import request, render_template, redirect
 from forms.login import LoginForm
 from forms.calculators import CardsForm
 from Finance import site_name, cards_dict
-import Finance
 
 
 def index():
@@ -20,7 +19,6 @@ def cards():
     benefits = []
     # If credit cards have been collected
     if json_cards is not None:
-        print("GETEM")
         card_list = json.loads(json_cards)
         reverse_card_dict = dict((v, k) for k, v in cards_dict.items())
 
