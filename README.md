@@ -9,7 +9,8 @@ Requirements To Run:
 	- Python 3.x+
 	- Flask
 	- MongoDB
+	- pymongo
 	- Flask_WTF
 	- Flask_Login
 	- Flask_Bootstrap
-	- WTF_Forms
+	- WTForms
