@@ -14,7 +14,8 @@ def index():
 
 
 def cards():
-    form = CardsForm()
+    form = LoginForm()
+    card_form = CardsForm()
     json_cards = request.form.get('card_list')
     benefits = []
     # If credit cards have been collected
@@ -34,4 +35,5 @@ def cards():
     return render_template('cards.html',
                            name=site_name,
                            form=form,
+                           card_form=card_form,
                            benefits=benefits)

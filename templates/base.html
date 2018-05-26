@@ -32,8 +32,8 @@
           {% if form is defined %}
           <form class="form-inline my-2 my-lg-0" method="post" action='/login'>
               {{ form.csrf_token }}
-              <input class="form-control mr-sm-2" type="text" name="username" placeholder="username" aria-label="username">
-              <input class="form-control mr-sm-2" type="password" name="password" placeholder="password" aria-label="password">
+              {{ form.username(class_="form-control mr-sm-2", placeholder="Username")}}
+              {{ form.password(class_="form-control mr-sm-2", placeholder="Password")}}
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
           </form>
           {% else %}

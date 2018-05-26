@@ -2,7 +2,7 @@
 {% block content %}
     <div class="container" style="margin-top: 5%;">
         <h2> Card Selections </h2>
-        {{ form.cards_selector(class_="form-control mr-sm-2")}}
+        {{ card_form.cards_selector(class_="form-control mr-sm-2")}}
         <br/>
         <div style="float:right;">
             <button name="add" onclick="addCard()" class="btn btn-outline-success my-w my-sm-0">Add</button>
@@ -10,7 +10,7 @@
         </div>
         <br/>
         <div style="padding-top:2%" id="cardlist">
-            {% for card_field in form.card_str_fields %}
+            {% for card_field in card_form.card_str_fields %}
                 {{ card_field }}
             {% endfor %}
         </div>
