@@ -5,3 +5,5 @@ __pycache__/*
 db/*
 db/
 dump/*
+venv
+*.cpython-36.pyc
