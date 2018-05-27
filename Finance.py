@@ -16,10 +16,12 @@ if __name__ == '__main__':
     Bootstrap(app)
     app.register_blueprint(login_blueprint.login_bp)
 
+    app.jinja_env.auto_reload = True
     app.config.update(
         DEBUG=True,
         SECRET_KEY="that's-a-spicyah-meatball",
-        SESSION_COOKIE_NAME=site_name
+        SESSION_COOKIE_NAME=site_name,
+        TEMPLATES_AUTO_RELOAD=True
     )
 
     lm = LoginManager()

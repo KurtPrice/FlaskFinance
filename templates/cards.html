@@ -14,15 +14,11 @@
                 {{ card_field }}
             {% endfor %}
         </div>
-        <div id="found_benefits">
-            {% for benefit in benefits %}
-                <p>{{ benefit }}<br/></p>
-            {% endfor %}
-        </div>
     </div>
     {% block scripts %}
         {{ super() }}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="{{ url_for('static', filename='cards.js') }}" />
+        <script src="https://d3js.org/d3.v5.min.js"></script>
     {% endblock %}
 {% endblock %}
